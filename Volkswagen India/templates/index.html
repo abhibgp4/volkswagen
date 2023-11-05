@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Upload 2c</title>
+</head>
+<body>
+  <h1>Image Upload to AWS</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*">
+    <button type="submit">Upload Image</button>
+  </form>
+  <p id="message"></p>
+
+  <h1>Image Results</h1>
+  <h2>Detected Face</h2>
+  <img src="{{ detected_face }}" alt="Detected Face" width="300" height="200">
+  
+  <h2>Predicted Image</h2>
+  <img src="{{ predicted_image }}" alt="Predicted Image" width="300" height="200">
+</body>
+</html>
